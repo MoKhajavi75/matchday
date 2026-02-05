@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
+    "start": "pnpm build && pnpm preview",
     "prettier": "prettier -c . --config .prettierrc.json",
     "format": "prettier -w . --config .prettierrc.json",
     "check-types": "tsc --project tsconfig.json",
