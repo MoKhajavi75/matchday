@@ -1,0 +1,6 @@
+.DS_Store
+.husky
+.pnpm
+build
+node_modules
+pnpm-lock.yaml
