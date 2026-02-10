@@ -1,6 +1,6 @@
 # ⚽ MatchDay - FIFA Match Manager
 
-A modern, local web application for managing FIFA matches between friends with two competition formats: Home & Away League and Knockout Cup. Built with vanilla JavaScript, HTML5, and CSS3.
+A modern, local web application for managing FIFA matches between friends with two competition formats: Home & Away League and Knockout Cup. Built with TypeScript and Vite.
 
 <p align="center">
   <img src="./assets/light.jpeg" alt="MatchDay Screenshot - Light" width="500">
@@ -37,40 +37,34 @@ A modern, local web application for managing FIFA matches between friends with t
 
 ## Technology Stack
 
-- **Frontend**: Vanilla JavaScript (ES6 modules), HTML5, CSS3
+- **Frontend**: TypeScript, HTML5, CSS3
+- **Build Tool**: Vite
 - **Storage**: localStorage (offline-first, no server required)
 - **Package Manager**: pnpm
-- **Dev Tools**: live-server, prettier
+- **Dev Tools**: Prettier
 
 ## Getting Started
 
-### Prerequisites
+### Option 1 — Download (recommended)
 
-- Node.js (v24 or higher)
-- pnpm (or npm/yarn)
+1. Go to the [Releases](https://github.com/MoKhajavi75/matchday/releases) page
+2. Download `matchday-vX.X.X.html` from the latest release
+3. Open it in your browser — that's it, no installation required
 
-### Installation
+All data is stored locally in your browser's localStorage and persists across sessions.
 
-1. Clone the repository:
+### Option 2 — Build from source
+
+**Prerequisites:** Node.js v24+, pnpm v10+
 
 ```bash
 git clone git@github.com:MoKhajavi75/matchday.git
 cd matchday
-```
-
-2. Install dependencies:
-
-```bash
 pnpm install
+pnpm build        # produces dist/index.html
 ```
 
-3. Start the server:
-
-```bash
-pnpm start
-```
-
-It will open your browser and navigate to the app.
+Open `dist/index.html` in your browser, or run `pnpm start` to serve it with a live preview.
 
 ## Usage
 
@@ -117,9 +111,9 @@ Uses the **circle method** for balanced fixture generation:
 
 **Example with 4 players:**
 
-- Round 1: P1-P2, P3-P4
-- Round 2: P1-P3, P2-P4
-- Round 3: P1-P4, P2-P3
+- Round 1: P1-P4, P2-P3
+- Round 2: P1-P3, P4-P2
+- Round 3: P1-P2, P3-P4
 - Rounds 4-6: Return fixtures with swapped home/away
 
 ### Knockout Bracket (Cup)
