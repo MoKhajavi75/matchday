@@ -16,16 +16,14 @@ conventional_commits = true
 filter_unconventional = true
 
 commit_parsers = [
-  { message = "^feat", group = "Features" },
-  { message = "^fix", group = "Bug Fixes" },
-  { message = "^perf", group = "Performance" },
-  { message = "^refactor", group = "Refactoring" },
-  { message = "^docs", group = "Documentation" },
-  { message = "^style", group = "Styling" },
-  { message = "^test", group = "Testing" },
-  { message = "^chore", group = "Chores" },
-  { message = "^ci", skip = true },
-  { message = "^build", skip = true }
+  { message = "^feat", group = "🚀 Features" },
+  { message = "^fix", group = "🐛 Bug Fixes" },
+  { message = "^perf", group = "⚡ Performance" },
+  { message = "^refactor", group = "🔧 Refactoring" },
+  { message = "^docs", group = "📚 Documentation" },
+  { message = "^style", group = "🎨 Styling" },
+  { message = "^test", group = "🧪 Testing" },
+  { message = "^chore|^ci|^build", group = "🔩 General" }
 ]
 
 filter_commits = false
